@@ -1,0 +1,84 @@
+<! DOCTYPE html>
+<html lang="es">
+<meta charset="utf-8"/>
+<head>
+<title> Bienvenido </title>
+<link rel="stylesheet" type="text/css" href="estilos.css"/>
+</head>
+<center>
+<body >
+	<img src="iconoange.ico"id="logo">
+	
+
+<h1><center> B I E N V E N I D O S </center></h1>
+ 
+ 
+ <form action="datos3.html" method="POST" name"" Id="for">
+<table id="registropersonal" class="registropersonal" border="5px" bgcolor=" #9AFE2E" >
+
+
+
+<tr>
+<td><label> Nombre</label></td>
+<td><input name="nombre " Type="Text" Id="nombre" maxlength="35" required   ></td>
+</tr>
+
+<tr>
+<td><label> Apellidos</label></td>
+<td><input name="apellidos" Type="Text" Id="apellidos" maxlength="30" required   ></td>
+</tr>
+
+<tr>
+<td><label> Numero celular</label></td>
+<td><input name="cel"  Id="cel" maxlength="12" required   ></td>
+</tr>
+
+<tr>
+<td><label> Ciudad de Residencia</label></td>
+<td><input name="ciudad"  Id="ciudad" maxlength="12" required   ></td>
+</tr>
+
+
+<tr>
+<td><label> Dirreccion de residencia </label></td>
+<td><input name="direccion" Type="text" Id="direccion" maxlength="40" required    ></td>
+</tr>
+
+<tr>
+<td><label> Email </label></td>
+<td><input name="email" Type="text" Id="email" maxlength="40" required    ></td>
+</tr>
+
+<tr>
+<td><label> Departamento </label></td>
+<td><select>
+  <?php
+		include 'conexion.php';
+		$re=mysql_query("select * from departamentos")or die(mysql_error());
+		while ($f=mysql_fetch_array($re)) {
+		?>				
+				<?php echo $f['Departamento'];?>
+	     <?php
+		}
+	?> 
+   
+</select></td>
+</tr>
+
+<tr>
+<td><label> Sector </label></td>
+<td><select> 
+</select></td>
+</tr>
+
+</table>
+
+<input type="submit" name"Enviar" value="Enviar" id="Enviar1">
+<button type="reset" id="limpiar1">Limpiar</button >
+
+
+
+</form>
+</body>
+ 
+</body>
